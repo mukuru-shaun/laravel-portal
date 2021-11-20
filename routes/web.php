@@ -17,8 +17,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/', function () {
-        $user = Auth::user();
-        dd($user);
+        return view('home');
     });
 });
 
