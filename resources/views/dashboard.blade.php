@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -19,6 +19,9 @@
                     <div class="list-group">
                         <a href="{{URL::route('profile')}}" class="list-group-item list-group-item-action">
                             Update your public key
+                        </a>
+                        <a href="{{URL::route('external-accounts')}}" class="list-group-item list-group-item-action">
+                            Link your Github and Gitlab accounts
                         </a>
                     </div>
                 </div>

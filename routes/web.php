@@ -20,6 +20,10 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [\App\Http\Controllers\UserController::class, 'saveProfile'])->name('save-profile');
+
+    Route::get('/external-accounts', [\App\Http\Controllers\ExternalAccountController::class, 'accountsList'])->name('external-accounts');
+    Route::get('/external-accounts/redirect/{provider}', [\App\Http\Controllers\ExternalAccountController::class, 'redirect'])->name('external-accounts-redirect');
+    Route::get('/external-accounts/callback/{provider}', [\App\Http\Controllers\ExternalAccountController::class, 'callback'])->name('external-accounts-callback');
 });
 
 Route::get('/auth/redirect', function () {
