@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app') 
 
 @section('content')
 <div class="container">
@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <center>{{ __('Whatcha want?') }}</center>
+
+                    <div class="list-group">
+                        <a href="{{URL::route('profile')}}" class="list-group-item list-group-item-action">
+                            Update your public key
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

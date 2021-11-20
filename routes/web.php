@@ -16,9 +16,10 @@ use Laravel\Socialite\Facades\Socialite;
 */
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/', function () {
-        return view('home');
-    });
+    Route::view('/', 'dashboard');
+
+    Route::get('/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('profile');
+    Route::post('/profile', [\App\Http\Controllers\UserController::class, 'saveProfile'])->name('save-profile');
 });
 
 Route::get('/auth/redirect', function () {
@@ -34,6 +35,8 @@ Route::get('/auth/callback', function () {
         $authUser = User::create([
             'name' => $user->getName(),
             'email' => $user->getEmail(),
+            'provider' => 'azure',
+            'provider_id' => $user->getId(),
         ]);
     }
 
