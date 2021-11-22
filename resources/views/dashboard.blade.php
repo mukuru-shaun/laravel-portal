@@ -8,9 +8,9 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
+                    @if (session('success'))
                         <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                            {{ session('success') }}
                         </div>
                     @endif
 
@@ -22,6 +22,9 @@
                         </a>
                         <a href="{{URL::route('external-accounts')}}" class="list-group-item list-group-item-action">
                             Link your Github and Gitlab accounts
+                        </a>
+                        <a href="{{URL::route('access-request')}}" class="list-group-item list-group-item-action">
+                            Request Database Access
                         </a>
                     </div>
                 </div>

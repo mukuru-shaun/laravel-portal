@@ -18,8 +18,8 @@ class ApplicationInstance extends Model
         return $this->belongsTo(Application::class);
     }
 
-    public function environment(): HasOne
+    public function environment(): BelongsTo
     {
-        return $this->hasOne(Environment::class);
+        return $this->belongsTo(Environment::class);
     }
 }
