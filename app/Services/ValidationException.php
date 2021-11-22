@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Portal;
+namespace App\Services;
 
 use Illuminate\Support\MessageBag;
 

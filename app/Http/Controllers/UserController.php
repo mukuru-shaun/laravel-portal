@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Portal\User\UserService;
-use Portal\ValidationException;
+use App\Services\User\UserService;
+use App\Services\ValidationException;
 
 class UserController extends Controller
 {

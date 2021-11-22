@@ -1,13 +1,13 @@
 <?php
 
-namespace Portal\User;
+namespace App\Services\User;
 
 use App\Models\User;
 use Illuminate\Validation\Factory;
 use Illuminate\Validation\Validator;
 use phpseclib3\Crypt\Common\PublicKey;
 use phpseclib3\Crypt\PublicKeyLoader;
-use Portal\ValidationException;
+use App\Services\ValidationException;
 
 class UserService
 {
